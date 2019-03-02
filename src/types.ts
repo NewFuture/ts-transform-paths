@@ -71,7 +71,7 @@ export class PathAliasResolver {
         relativePath = "." + path.sep + relativePath;
       }
 
-      return relativePath;
+      return relativePath.replace(/\\/g, '/');
     } else {
       return requestedModule;
     }
